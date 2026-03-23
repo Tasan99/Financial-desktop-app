@@ -1,0 +1,67 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.sidebar {
+    background: white;
+    height: 100vh;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Sütunların Birbirine Girmesini Engeller */
+.table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+td, th {
+    white-space: nowrap; 
+    padding: 10px 15px !important; 
+    min-width: 110px; 
+    text-align: right;
+    font-family: 'Consolas', 'Monaco', monospace; 
+    vertical-align: middle;
+}
+
+/* İlk Sütun (Hesap İsimleri) Sabit, Geniş ve Sola Yaslı */
+td:first-child, th:first-child {
+    text-align: left;
+    font-family: 'Segoe UI', sans-serif;
+    min-width: 220px;
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 5;
+}
+
+/* Finansal Sektör Renkleri */
+.neg-value { color: #d32f2f !important; font-weight: 600; } /* Kırmızı */
+.pos-value { color: #2e7d32 !important; font-weight: 600; } /* Yeşil */
+.neutral-value { color: #212529 !important; font-weight: 600; } /* Siyah */
+
+/* Sidebar Aktif Buton */
+.btn-report {
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+
+.active-report {
+    border-left: 5px solid #0d6efd !important;
+    background-color: #e9ecef !important;
+    color: #0d6efd !important;
+    font-weight: bold;
+    transform: translateX(5px);
+}
+
+.table thead th {
+    background-color: #212529;
+    color: white;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.table-secondary { background-color: #f1f3f5 !important; }
